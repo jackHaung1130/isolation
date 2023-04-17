@@ -7,7 +7,7 @@
     <title>屎缺位子實錄</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="current_time(), shit_time(), exam_left_days(), japan_left_days(), change_seat_left_days()">
+<body onload="current_time(), shit_time(), load_exam_time(), load_japan_time(), load_change_seat_time()">
     <center>
         <div class= "title">
             <center>
@@ -43,7 +43,7 @@
     <center>
         <div class= "title">
             <center>第二次段考時間 5/18 、 5/19</center>
-            <center>距離現在還有 <span id="exam_date"></span> 天</center>
+            <center>距離現在還有.. <br/> <span id="exam_date"></span> 天 / <span id="exam_hour"></span> 小時 / <span id="exam_min"></span> 分鐘 / <span id="exam_sec"></span> 秒</center>
         </div>
     </center>
 
@@ -52,7 +52,7 @@
     <center>
         <div class= "title">
             <center>日本參訪時間 5/22 - 5/26 </center>
-            <center>距離現在還有 <span id="japan_date"></span> 天</center>
+            <center>距離現在還有.. <br/> <span id="japan_date"></span> 天 / <span id="japan_hour"></span> 小時 / <span id="japan_min"></span> 分鐘 / <span id="japan_sec"></span> 秒</center>
         </div>
     </center>    
 
@@ -61,7 +61,7 @@
     <center>
         <div class= "title">
             <center>目前推測日本參訪結束後換位子，日期暫定 5/29 </center>
-            <center>距離現在還有 <span id="change_seat_date"></span> 天</center>
+            <center>距離現在還有.. <br/> <span id="change_seat_date"></span> 天 / <span id="change_seat_hour"></span> 小時 / <span id="change_seat_min"></span> 分鐘 / <span id="change_seat_sec"></span> 秒</center>
         </div>
     </center>    
 
@@ -135,7 +135,7 @@
         return last_time
         //console.log(shit_seat_time, last_time)
     }
-
+////////////////////////////////
     function get_exam_left_day(){
         let exam_date = 1684252800
         let timestamp = Math.floor(Date.now()/1000)
@@ -144,6 +144,35 @@
         left_time = Math.floor(left_time / 60 / 60 /24)
         return left_time
     }
+
+    function get_exam_left_hour(){
+        let exam_date = 1684252800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = exam_date - timestamp
+        left_time = Math.floor(left_time / 60 / 60 )
+        return left_time
+    }
+
+    function get_exam_left_min(){
+        let exam_date = 1684252800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = exam_date - timestamp
+        left_time = Math.floor(left_time / 60)
+        return left_time
+    }    
+
+    function get_exam_left_sec(){
+        let exam_date = 1684252800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = exam_date - timestamp
+        left_time = Math.floor(left_time )
+        return left_time
+    }
+/////////////////////////////
+
 
     function get_japan_left_day(){
         let japan_date = 1684684800
@@ -154,6 +183,34 @@
         return left_time
     }
 
+    function get_japan_left_hour(){
+        let japan_date = 1684684800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = japan_date - timestamp
+        left_time = Math.floor(left_time / 60 / 60 )
+        return left_time
+    }
+
+    function get_japan_left_min(){
+        let japan_date = 1684684800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = japan_date - timestamp
+        left_time = Math.floor(left_time / 60 )
+        return left_time
+    }
+
+    function get_japan_left_sec(){
+        let japan_date = 1684684800
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = japan_date - timestamp
+        left_time = Math.floor(left_time)
+        return left_time
+    }
+
+////////////////////////////////////
     function get_change_seat_left_day(){
         let change_seat_date = 1685289600
         let timestamp = Math.floor(Date.now()/1000)
@@ -163,6 +220,34 @@
         return left_time
     }
 
+    function get_change_seat_left_hour(){
+        let change_seat_date = 1685289600
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = change_seat_date - timestamp
+        left_time = Math.floor(left_time / 60 / 60 )
+        return left_time
+    }
+
+    function get_change_seat_left_min(){
+        let change_seat_date = 1685289600
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = change_seat_date - timestamp
+        left_time = Math.floor(left_time / 60)
+        return left_time
+    }
+    function get_change_seat_left_sec(){
+        let change_seat_date = 1685289600
+        let timestamp = Math.floor(Date.now()/1000)
+
+        let left_time = change_seat_date - timestamp
+        left_time = Math.floor(left_time)
+        return left_time
+    }
+
+
+///////////////////////////////////////////
     //time_shit_sit_continue()
     function current_time(){
     　document.getElementById('current').innerHTML = getDateTime();
@@ -174,18 +259,96 @@
     　setTimeout('shit_time()',1000); //每秒呼叫一次功能: current_time()
     }
 
+//////////////////////////////////////////
+
+    function load_exam_time(){
+        exam_left_days();
+        exam_left_hour();
+        exam_left_min();
+        exam_left_sec();
+    }
+
+/////////////////////////////////////////////
+
     function exam_left_days(){
     　document.getElementById('exam_date').innerHTML = get_exam_left_day();
     　setTimeout('exam_left_days()',1000); //每秒呼叫一次功能: current_time()
     }
 
+    function exam_left_hour(){
+    　document.getElementById('exam_hour').innerHTML = get_exam_left_hour();
+    　setTimeout('exam_left_hour()',1000); //每秒呼叫一次功能: current_time()
+    }
+
+    function exam_left_min(){
+    　document.getElementById('exam_min').innerHTML = get_exam_left_min();
+    　setTimeout('exam_left_min()',1000); //每秒呼叫一次功能: current_time()
+    }
+
+    function exam_left_sec(){
+    　document.getElementById('exam_sec').innerHTML = get_exam_left_sec();
+    　setTimeout('exam_left_sec()',1000); //每秒呼叫一次功能: current_time()
+    }
+
+////////////////////////////////////////////
+    function load_japan_time(){
+        japan_left_days();
+        japan_left_hour();
+        japan_left_min();
+        japan_left_sec();
+    }
+
+////////////////////////////////////////////
     function japan_left_days(){
     　document.getElementById('japan_date').innerHTML = get_japan_left_day();
     　setTimeout('japan_left_days()',1000); //每秒呼叫一次功能: current_time()
     }
 
+    function japan_left_hour(){
+    　document.getElementById('japan_hour').innerHTML = get_japan_left_hour();
+    　setTimeout('japan_left_hour()',1000); //每秒呼叫一次功能: current_time()
+    }
+
+    function japan_left_min(){
+    　document.getElementById('japan_min').innerHTML = get_japan_left_min();
+    　setTimeout('japan_left_min()',1000); //每秒呼叫一次功能: current_time()
+    }
+    
+    function japan_left_sec(){
+    　document.getElementById('japan_sec').innerHTML = get_japan_left_sec();
+    　setTimeout('japan_left_sec()',1000); //每秒呼叫一次功能: current_time()
+    }    
+
+
+///////////////////////////////////////////
+
+    function load_change_seat_time(){
+        change_seat_left_days();
+        change_seat_left_hour();
+        change_seat_left_min();
+        change_seat_left_sec();
+    }
+
+///////////////////////////////////////////
+
     function change_seat_left_days(){
     　document.getElementById('change_seat_date').innerHTML = get_change_seat_left_day();
-    　setTimeout('echange_seat_left_days()',1000); //每秒呼叫一次功能: current_time()
+    　setTimeout('change_seat_left_days()',1000); //每秒呼叫一次功能: current_time()
     }
+
+    function change_seat_left_hour(){
+    　document.getElementById('change_seat_hour').innerHTML = get_change_seat_left_hour();
+    　setTimeout('change_seat_left_hour())',1000); //每秒呼叫一次功能: current_time()
+    }
+
+    function change_seat_left_min(){
+    　document.getElementById('change_seat_min').innerHTML = get_change_seat_left_min();
+    　setTimeout('change_seat_left_min()',1000); //每秒呼叫一次功能: current_time()
+    }
+
+    function change_seat_left_sec(){
+    　document.getElementById('change_seat_sec').innerHTML = get_change_seat_left_sec();
+    　setTimeout('change_seat_left_sec()',1000); //每秒呼叫一次功能: current_time()
+    }
+
 </script>
