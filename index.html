@@ -134,7 +134,7 @@
     }
 
     function get_japan_left_day(){
-        let japan_date = 1684252800
+        let japan_date = 1684684800
         let timestamp = Math.floor(Date.now()/1000)
 
         let left_time = japan_date - timestamp
@@ -169,7 +169,7 @@
 
     function japan_left_days(){
     　document.getElementById('japan_date').innerHTML = get_japan_left_day();
-    　setTimeout('exam_left_days()',1000); //每秒呼叫一次功能: current_time()
+    　setTimeout('japan_left_days()',1000); //每秒呼叫一次功能: current_time()
     }
 
     function change_seat_left_days(){
