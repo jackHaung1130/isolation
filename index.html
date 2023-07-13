@@ -1,378 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>屎缺位子實錄</title>
-    <link rel="stylesheet" href="style.css">
+  <title>個人介紹頁面</title>
+  <link rel="stylesheet" href="index.css">
+
 </head>
-<body onload="current_time(), shit_time(), load_exam_time(), load_japan_time(), load_change_seat_time()">
-    <center>
-        <div class= "title">
-            <center>
-                嗨你好，這裡是被排到爛位子的禎頡<br/>
-                為了搞清楚自己還要跟這個位子相處多久<br />
-                所以就寫了這個網站<br />
-                我和林月沒有打算每天上學算天數了<br/>
-                直接自動化處理這件破事<br/>
-                以上，此網站存在之理<br/><br/>
-                以下近期重要資訊查收<br />
-                最後，幹您娘<br />
-                <br/>
-                2-1 4-1此次座位表之神座<br/>
-                沒有之三<br/>
-            </center>
-        </div>
-    </center>
 
-    <br/>
+<body>
+  <div class="header">
+    <h1 class="header_text" id="header-title">Loading..</h1>
+  </div>
 
-    <center>
-        <div class= "title">
-            <center> 現在時間 <span id='current'></span></center><br />
-
-            <center>屎缺位子起始時間 2023/04/17 早上8點</center><br />
+  <div class="container">
+    <div class="profile">
+      <div class="profile-image">
+        <img src="./icon/avartar.jpg" alt="個人圖片">
+      </div>
+      <div class="profile-content">
+        <h2 class="profile-name">黃禎頡 / Jack Huang</h2>
+        <p class="profile-title">學生 / 程式初學者 / 簡報製作 / 「學測戰士」</p>
+        <p class="profile-bio">當前就讀君毅高中，平時喜歡寫寫程式，跟進科技時事，有甚麼新科技，我大概率都會在一周內知道。<br>關於簡報這檔事，由我出手、必是精品。😉</p>
+      </div>
+      
+    </div>
+    <div class="social-media">
+      <div class="social-media-image">
+        <a href="https://www.facebook.com/Jack.Huang20/" class="social-media-image-img"><img src="./icon/facebook.png"></a>
+      </div>
+      <div class="social-media-image">
+        <a href="https://www.instagram.com/jack.huang_14/" class="social-media-image-img"><img src="./icon/instagram.png"></a>
+      </div>
+      <div class="social-media-image">
+        <a href="https://www.threads.net/@jack.huang_14/" class="social-media-image-img"><img src="./icon/threads.png"></a>
+      </div>
+      <div class="social-media-image">
+        <a href="https://github.com/jackHuang14" class="social-media-image-img"><img src="./icon/github.png"></a>
+      </div>
         
-            <center>屎缺位子已經持續大約 <span id="shit_sit_time"></span> 個小時了幹 😡</center>
+        
+        
+      
+    </div>
+
+    <div class="profile-motto">
+      <h2 class="profile-motto-quote-mark-left">❛❛</h2>
+      <h2 class="profile-motto-quote">別展露才能，這會過勞。</h2>
+      <h2 class="profile-motto-quote-mark-right">❜❜</h2>
+
+    </div>
+    <div class="feature-title">什麼都不大專精，但就是這些好一點</div>
+    <div class="features">
+      <div class="feature">
+        <h2>英文</h2>
+        <p>能順讀各種介紹類檔案。</p>
+      </div>
+
+      <div class="feature">
+        <h2>程式設計</h2>
+        <p>在物件導向設計的路上努力著。</p>
+      </div>
+
+      <div class="feature">
+        <h2>簡報製作</h2>
+        <p>看過都說讚。</p>
+      </div>
+    </div>
+
+
+    <div class="projects">
+      <h2>一些正在努力的的事情..</h2>
+      <div class="project">
+        <h3>學習程式語言</h3>
+        <p>當前正在學習JavaScript / Python /
+          Java。<br>三者較為熟悉的是JavaScript，小弟還是比較喜歡它的用法，<br>其中Python是上課學的，隨便學的。<br>最後Java是目前最想學成的語言，但由於物件導向的設計頗難，還擱置中。</p>
+      </div>
+      <div class="project">
+        <h3>運營社群</h3>
+        <p>好的，應該不多人知道。 <br> 但我先放在這裡，我有興趣可以聊很多，但目前沒有。</p>
+      </div>
+      <div class="project">
+        <h3>學測戰士</h3>
+        <p>機掰阿學測。<br>但目前已經確定想要往資工方向前進。<br>謝謝我媽開明說服我爸。</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="life-count-down">人生倒數計時</div>
+      <div class="life-count-down-lists">
+        <div class="life-count-down-list-1">
+          <h3 class="life-title">113年學測倒數</h3>
+          <p class= "life-date">1/20 - 1/22</p>
+          <p class="ceec-day life-count"></p>
+          <p class="ceec-hour life-count"></p>
         </div>
-    </center>
-
-    <br/>
-
-    <center>
-        <div class= "title">
-            <center>第二次段考時間 5/18 、 5/19</center>
-            <center>距離現在還有.. <br/> <span id="exam_date"></span> 天 / <span id="exam_hour"></span> 小時 / <span id="exam_min"></span> 分鐘 / <span id="exam_sec"></span> 秒</center>
+        <div class="life-count-down-list-1">
+          <h3 class="life-title">113年分科倒數</h3>
+          <p class= "life-date">暫 7/12 - 7/13 </p>
+          <p class="ceec-again-day life-count"></p>
+          <p class="ceec-again-hour life-count"></p>          
         </div>
-    </center>
+      </div>
 
-    <br/>
-
-    <center>
-        <div class= "title">
-            <center>日本參訪時間 5/22 - 5/26 </center>
-            <center>距離現在還有.. <br/> <span id="japan_date"></span> 天 / <span id="japan_hour"></span> 小時 / <span id="japan_min"></span> 分鐘 / <span id="japan_sec"></span> 秒</center>
+      <div class="life-count-down-lists">
+        <div class="life-count-down-list-2">
+          <h3>一模</h3>
         </div>
-    </center>    
+        <div class="life-count-down-list-2">
+          <h3>二模</h3>
+        </div>       
+        <div class="life-count-down-list-2">
+          <h3>三模</h3>
+        </div>           
+      </div>
 
-    <br/>
-
-    <center>
-        <div class= "title">
-            <center>目前推測日本參訪結束後換位子，日期暫定 5/29 </center>
-            <center>距離現在還有.. <br/> <span id="change_seat_date"></span> 天 / <span id="change_seat_hour"></span> 小時 / <span id="change_seat_min"></span> 分鐘 / <span id="change_seat_sec"></span> 秒</center>
+      <div class="copyright">
+        <div>
+          Copyright © 2023 黃禎頡. All rights reserved.
         </div>
-    </center>    
-
-    <br/>
-
-    <center>
-        <div class="title">
-            <center>秉持開源精神，附上所有代碼</center>
-            <center><a href="https://github.com/jackHuang14/Personal-Website" target="_blank">網站原始碼</a></center>
+        <div>
+          版權所有© 2023 黃禎頡
         </div>
-    </center>    
+      </div>
 
-    <br/>
+    </div>
 
-    <center>
-        <div class="title">
-            <center>智慧財產權聲明</center>
-            <center>此專案程式碼均由我所撰寫</center>
-            <center>為節省時間，大部分擷取自過往專案中</center>
-            <center>所有函數(function)、程式碼(code)</center>
-            <center>均由我第一手製作</center>
-        </div>
-    </center>
-
-    <br/>
-   
-    <center>
-        <div class="title">
-            <center>前端網路工程不是人搞的</center>
-            <center>我還是推薦後端工程</center>
-            <center>為了搞清楚HTML怎麼寫，還上網查</center>
-            <center>後端JavaScript信手拈來==</center>
-        </div>
-    </center>
-
+  </div>
+  <script src="index.js"></script>
 </body>
+
 </html>
-
-<script>
-
-    
-
-    function accurationTime(){
-        const date = new Date();
-        let year = date.getFullYear();
-        let month = (date.getMonth()+1);
-        let day = date.getDate();
-        let hour = date.getHours();
-        let minutes = date.getMinutes();
-        let seconds = date.getSeconds();
-
-        function timeModify(number){
-            if ( number < 10 ){
-                let newNumber = "0"+ number
-                return newNumber
-            } 
-            return number
-        }
-
-        month = timeModify(month);
-        day = timeModify(day);
-        hour = timeModify(hour);
-        minutes = timeModify(minutes);
-        seconds = timeModify(seconds);
-
-        return {
-            year: year,
-            month: month,
-            day: day,
-            hour: hour,
-            minutes: minutes,
-            seconds: seconds
-        }
-    }
-
-
-     function getDateTime(){
-    
-        const time = accurationTime();
-
-        let updateDateTime = time.year + "/" + time.month + "/" + time.day + " @ " + time.hour + ":" + time.minutes + ":" + time.seconds;
-        return updateDateTime
-    }
-    //document.getElementById('current').innerHTML = getDateTime();
-
-    function time_shit_sit_continue(){
-        let shit_seat_time = 1681689600
-        let timestamp = Math.floor(Date.now()/1000)
-        //let timenow = Date.now()
-
-        let last_time = timestamp - shit_seat_time 
-
-        last_time = Math.floor(last_time / 60 / 60)
-        return last_time
-        //console.log(shit_seat_time, last_time)
-    }
-////////////////////////////////
-    function get_exam_left_day(){
-        let exam_date = 1684252800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = exam_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 /24)
-        return left_time
-    }
-
-    function get_exam_left_hour(){
-        let exam_date = 1684252800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = exam_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 )
-        return left_time
-    }
-
-    function get_exam_left_min(){
-        let exam_date = 1684252800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = exam_date - timestamp
-        left_time = Math.floor(left_time / 60)
-        return left_time
-    }    
-
-    function get_exam_left_sec(){
-        let exam_date = 1684252800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = exam_date - timestamp
-        left_time = Math.floor(left_time )
-        return left_time
-    }
-/////////////////////////////
-
-
-    function get_japan_left_day(){
-        let japan_date = 1684684800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = japan_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 /24)
-        return left_time
-    }
-
-    function get_japan_left_hour(){
-        let japan_date = 1684684800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = japan_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 )
-        return left_time
-    }
-
-    function get_japan_left_min(){
-        let japan_date = 1684684800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = japan_date - timestamp
-        left_time = Math.floor(left_time / 60 )
-        return left_time
-    }
-
-    function get_japan_left_sec(){
-        let japan_date = 1684684800
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = japan_date - timestamp
-        left_time = Math.floor(left_time)
-        return left_time
-    }
-
-////////////////////////////////////
-    function get_change_seat_left_day(){
-        let change_seat_date = 1685289600
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = change_seat_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 /24)
-        return left_time
-    }
-
-    function get_change_seat_left_hour(){
-        let change_seat_date = 1685289600
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = change_seat_date - timestamp
-        left_time = Math.floor(left_time / 60 / 60 )
-        return left_time
-    }
-
-    function get_change_seat_left_min(){
-        let change_seat_date = 1685289600
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = change_seat_date - timestamp
-        left_time = Math.floor(left_time / 60)
-        return left_time
-    }
-    function get_change_seat_left_sec(){
-        let change_seat_date = 1685289600
-        let timestamp = Math.floor(Date.now()/1000)
-
-        let left_time = change_seat_date - timestamp
-        left_time = Math.floor(left_time)
-        return left_time
-    }
-
-
-///////////////////////////////////////////
-    //time_shit_sit_continue()
-    function current_time(){
-    　document.getElementById('current').innerHTML = getDateTime();
-    　setTimeout('current_time()',1000); 
-    }
-
-    function shit_time(){
-    　document.getElementById('shit_sit_time').innerHTML = time_shit_sit_continue();
-    　setTimeout('shit_time()',1000); 
-    }
-
-//////////////////////////////////////////
-
-    function load_exam_time(){
-        exam_left_days();
-        exam_left_hour();
-        exam_left_min();
-        exam_left_sec();
-    }
-
-/////////////////////////////////////////////
-
-    function exam_left_days(){
-    　document.getElementById('exam_date').innerHTML = get_exam_left_day();
-    　setTimeout('exam_left_days()',1000); 
-    }
-
-    function exam_left_hour(){
-    　document.getElementById('exam_hour').innerHTML = get_exam_left_hour();
-    　setTimeout('exam_left_hour()',1000); 
-    }
-
-    function exam_left_min(){
-    　document.getElementById('exam_min').innerHTML = get_exam_left_min();
-    　setTimeout('exam_left_min()',1000); 
-    }
-
-    function exam_left_sec(){
-    　document.getElementById('exam_sec').innerHTML = get_exam_left_sec();
-    　setTimeout('exam_left_sec()',1000); 
-    }
-
-////////////////////////////////////////////
-    function load_japan_time(){
-        japan_left_days();
-        japan_left_hour();
-        japan_left_min();
-        japan_left_sec();
-    }
-
-////////////////////////////////////////////
-    function japan_left_days(){
-    　document.getElementById('japan_date').innerHTML = get_japan_left_day();
-    　setTimeout('japan_left_days()',1000); 
-    }
-    function japan_left_hour(){
-    　document.getElementById('japan_hour').innerHTML = get_japan_left_hour();
-    　setTimeout('japan_left_hour()',1000);
-    }
-
-    function japan_left_min(){
-    　document.getElementById('japan_min').innerHTML = get_japan_left_min();
-    　setTimeout('japan_left_min()',1000); 
-    }
-    
-    function japan_left_sec(){
-    　document.getElementById('japan_sec').innerHTML = get_japan_left_sec();
-    　setTimeout('japan_left_sec()',1000); 
-    }    
-
-
-///////////////////////////////////////////
-
-    function load_change_seat_time(){
-        change_seat_left_days();
-        change_seat_left_hour();
-        change_seat_left_min();
-        change_seat_left_sec();
-    }
-
-///////////////////////////////////////////
-
-    function change_seat_left_days(){
-    　document.getElementById('change_seat_date').innerHTML = get_change_seat_left_day();
-    　setTimeout('change_seat_left_days()',1000);
-    }
-
-    function change_seat_left_hour(){
-    　document.getElementById('change_seat_hour').innerHTML = get_change_seat_left_hour();
-    　setTimeout('change_seat_left_hour()',1000); 
-    }
-
-    function change_seat_left_min(){
-    　document.getElementById('change_seat_min').innerHTML = get_change_seat_left_min();
-    　setTimeout('change_seat_left_min()',1000); 
-    }
-
-    function change_seat_left_sec(){
-    　document.getElementById('change_seat_sec').innerHTML = get_change_seat_left_sec();
-    　setTimeout('change_seat_left_sec()',1000); 
-    }
-    
-    
-    
-</script>
