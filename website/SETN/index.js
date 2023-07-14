@@ -931,7 +931,7 @@ function addTableURL(list, url,i){
 
 }
 
-for (var i = 0; i < 10150; i++) {
+for (var i = 0; i < 150; i++) {
     let list = 'news-list' + i
     //console.log(list)
     let news_list = document.createElement('tr')
