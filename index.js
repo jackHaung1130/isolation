@@ -8,6 +8,7 @@ let welcome_array = [
 let ceec_unix = 1705680000000
 let ceec_again_unix = 1720713600000
 let summer_course_end_unix = 1691769599000
+let seat_unix = 1695009599000
 
 let header_text = document.getElementById('header-title');
 
@@ -22,6 +23,8 @@ let ceec_again_hour = document.querySelector(".ceec-again-hour").textContent = g
 let summer_course_day = document.querySelector(".summer-course-day").textContent = getLeftTime(summer_course_end_unix).leftDay + " 天"
 let summer_course_hour = document.querySelector(".summer-course-hour").textContent = getLeftTime(summer_course_end_unix).leftHour + " 小時"
 
+let seat_day = document.querySelector(".seat-day").textContent = getLeftTime(seat_unix).leftDay + "天"
+let seat_hour = document.querySelector(".seat-hour").textContent = getLeftTime(seat_unix).leftHour + "小時"
 //console.log(getLeftTime(ceec_unix))
 
 function getLeftTime(unix){
