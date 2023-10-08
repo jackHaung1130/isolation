@@ -484,3 +484,10 @@ hr {
 }
 
 
+.copyright{
+    background-color: #fffcfa;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-bottom: 20px;
+}
