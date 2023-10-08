@@ -69,15 +69,6 @@ hr {
          url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
   }
 
-  @media screen and (max-width: 500px) {
-    .scaled-element {
-        transform: scale(0.4); /* 在小屏幕上缩小80% */
-        font-size: 100%;
-    }
-}
-
-
-
 .intro_img{
     color: #000;
     background-image:url('./img/introJPG.jpg');
@@ -100,10 +91,10 @@ hr {
 
 .intro_topic{
     position: absolute;
-    top: 20%; /* 将元素的顶部移动到父容器的中间位置 */
-    left: 5%; /* 将元素的左侧移动到父容器的中间位置 */
+    top: 200px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
-    font-size: 500%;
+    font-size: 450%;
     font-family: 'Dela Gothic One', cursive;
     color: white;
     font-weight: bold;
@@ -112,10 +103,10 @@ hr {
 
 .intro_topic_1{
     position: absolute;
-    top: 30%; /* 将元素的顶部移动到父容器的中间位置 */
-    left: 5%; /* 将元素的左侧移动到父容器的中间位置 */
+    top: 280px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
-    font-size: 400%;
+    font-size: 50px;
     font-family: cwTeXYen;
     color: white;
     font-weight: bold;
@@ -124,10 +115,10 @@ hr {
 
 .intro_topic_2{
     position: absolute;
-    top: 90%; /* 将元素的顶部移动到父容器的中间位置 */
-    right: 3%; /* 将元素的左侧移动到父容器的中间位置 */
+    top: 840px; /* 将元素的顶部移动到父容器的中间位置 */
+    right: 50px; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
-    font-size: 250%;
+    font-size: 30px;
     font-family: cwTeXYen;
     color: white;
     font-weight: bold;
@@ -136,8 +127,8 @@ hr {
 
 .intro_topic_social{
     position: absolute;
-    top: 38%; /* 将元素的顶部移动到父容器的中间位置 */
-    left: 5%; /* 将元素的左侧移动到父容器的中间位置 */
+    top: 330px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
     font-size: 30px;
     font-family: cwTeXYen;
