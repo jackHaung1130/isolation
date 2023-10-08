@@ -1,3 +1,14 @@
+// 检测移动设备
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// 更改页面缩放比例
+if (isMobileDevice()) {
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5'); // 例如，将初始缩放比例设置为0.5
+}
+
+
 // 获取所有具有"data-progress"属性的进度条元素
 const progressBars = document.querySelectorAll('.progress-bar[data-progress]');
 
