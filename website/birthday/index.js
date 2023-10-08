@@ -50,3 +50,17 @@ birthday.forEach((birthday, e) => {
 
 
 
+window.addEventListener('resize', function() {
+    if (window.innerWidth < 500) { // 例如，当窗口宽度小于768像素时
+        document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5'); // 缩小视口比例
+    }
+});
+
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// 更改页面缩放比例
+if (isMobileDevice()) {
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5'); // 例如，将初始缩放比例设置为0.5
+}

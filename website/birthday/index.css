@@ -69,6 +69,14 @@ hr {
          url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
   }
 
+  @media screen and (max-width: 500px) {
+    .scaled-element {
+        transform: scale(0.5); /* 在小屏幕上缩小80% */
+      
+    }
+}
+
+
 .intro_img{
     color: #000;
     background-image:url('./img/introJPG.jpg');
