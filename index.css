@@ -1,92 +1,203 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
     margin: 0;
     padding: 0;
 }
 
-.header {
-    top: 0;
-    background-color: #333;
-    color: #fff;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
 
-.header_text {
-    margin-bottom: 10px
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+border-bottom: 1px dotted;
+cursor: help;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 1px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+q:before, q:after { content: ''; }
 
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
 }
 
-h1 {
-    font-size: 36px;
-    margin-top: 0;
+/* 重置表格元素 */
+table {
+border-collapse: collapse;
+border-spacing: 0;
 }
 
-p {
-    line-height: 1.5;
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+@font-face {
+    font-family: 'cwTeXYen';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+    src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+         url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+  }
+
+.intro_img{
+    color: #000;
+    background-image:url('./img/introJPG.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
 }
 
-.button:hover {
-    background-color: #555;
+.intro_content{
+    min-height: 900px;
+    
 }
 
-.feature-title {
+.intro_topic{
+    position: absolute;
+    top: 200px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
+    /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
+    font-size: 600%;
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.intro_topic_1{
+    position: absolute;
+    top: 280px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
+    /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
+    font-size: 50px;
+    font-family: cwTeXYen;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.intro_topic_2{
+    position: absolute;
+    top: 840px; /* 将元素的顶部移动到父容器的中间位置 */
+    right: 50px; /* 将元素的左侧移动到父容器的中间位置 */
+    /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
+    font-size: 30px;
+    font-family: cwTeXYen;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+}
+
+.intro_topic_social{
+    position: absolute;
+    top: 330px; /* 将元素的顶部移动到父容器的中间位置 */
+    left: 100px; /* 将元素的左侧移动到父容器的中间位置 */
+    /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
+    font-size: 30px;
+    font-family: cwTeXYen;
+    /*ackground-color: #fed2de;*/
     display: flex;
+    align-items: center;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 5px;
-    font-size:  20px;
-    font-weight: bold;
 }
 
-.features {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0px;
-}
-
-.feature {
-    flex-basis: 30%;
-    padding-left:10px;
-    padding-right:10px;
+.page-container{
+    background-color: #fffcfa;
     padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 选项卡容器 */
+.tab-container {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* 选项按钮样式 */
+.tab-button {
+    flex: 1;
     text-align: center;
+    margin: 5px;
 }
 
-.feature h2 {
-    font-size: 24px;
-    margin-top: 0;
+
+/* 选项按钮样式 */
+.tab-button .button-label {
+    display: block;
+    padding: 5px;
+    background-color: #2333cb;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: cwTeXYen;
+    font-size: 25px;
+    text-decoration: none;
+
 }
 
-.feature p {
-    margin-bottom: 0;
+.tab-button .button-label-main {
+    display: block;
+    padding: 5px;
+    background-color: #1a2697;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: cwTeXYen;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+/* 选项按钮悬停时的样式 */
+.tab-button .button-label:hover {
+    background-color: #314ba7;
+}
+
+.tab-button .button-label-main:hover {
+    background-color: #314ba7;
+}
+
+.tab-describe{
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    background-color: #fffcfa;
 }
 
 .social-media {
@@ -113,32 +224,61 @@ p {
     width:100%;
     padding: 0px;
     
+    
 }
 
-.notification {
-    text-align: center;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+.about-blank{
+    height: 100px;
+    background-color: #fffcfa;
 }
 
-.notification p {
-    margin: 0px;
+.about-content{
+    height: 400px;
+    background-color: #fffcfa;
 }
 
-.profile {
+.about-content-1{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-bottom: 10px;
+}
+.about-content-2{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.profile-card {
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    margin-top: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
+}
+
+.profile-card-info{
+    /*position: absolute;*/
+    /*top: 50%; /* 将元素的顶部移动到父容器的中间位置 */
+    /*left: 50%; /* 将元素的左侧移动到父容器的中间位置 */
+    /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-image {
     flex-basis: 20%;
-    margin-right: 20px;
-    border-radius: 30px;
+    /*margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 30px;*/
 }
 
 .profile-image img {
@@ -147,116 +287,200 @@ p {
 }
 
 .profile-content {
-    flex-basis: 70%;
+   margin-left: 20px;
+   line-height: 1.2;
 }
 
 .profile-name {
-    font-size: 24px;
+    font-size:24px;
+    font-family: 'Noto Sans TC', sans-serif;
     margin: 0;
 }
 
 .profile-title {
     font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
     color: #888;
     margin-top: 5px;
 }
 
 .profile-bio {
     margin-top: 20px;
+    font-size: 17px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.divider {
+    width: 2px; /* 分割线的宽度 */
+    background-color: #ccc; /* 分割线的颜色 */
+    height: 100%; /* 分割线的高度，根据需要调整 */
 }
 
-.profile-motto {
-    margin-top: 10px;
-    background-color:#f2f2f2;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.profile-motto-quote-mark-left {
+.about-profile-skills-container{
+    padding-top: 25px;
+    background-color: #fffcfa;
     display: flex;
-    justify-content: left;
-    top: 100%;
-    margin: 0px;
-    font-size: 20px;
+    justify-content: center; /* 水平居中 */
 }
 
-.profile-motto-quote {
+.about-profile-skills{
     display: flex;
-    justify-content: center;
-    margin: 0px;
+    justify-content: center; /* 水平居中 */
+    height: 100vh;
+    width: 75%;
+    line-height: 1.25;
 }
 
-.profile-motto-quote-mark-right {
-    display: flex;
-    justify-content: right;
-    bottom: 0px;
-    margin: 0px;
-    right: 100%;
-    font-size: 20px;
+.about-ps-colum {
+    flex: 1; /* 均分容器宽度 */
+    padding-top: 20px;
+    padding-left: 20px;
+    /*padding: 40px; /* 可根据需要调整列内边距 */
     
 }
 
-.life-count-down {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size:  20px;
+.about-ps-colum-topic{
+    font-size: 30px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: left;
+}
+
+.about-ps-colum-blank{
+    margin-top: 20px;
+}
+
+.about-ps-colum-p{
+    margin-top: 20px;
     font-weight: bold;
+    font-size: 23px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
-.life-count-down-lists {
-    display: flex;
-    justify-content: space-around;
+.about-ps-colum-text{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.progress-container-main {
     margin-top: 10px;
 }
 
-.life-count-down-list-1 {
-    flex-basis: 30%;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: #ccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
-.life-count-down-list-2 {
-    margin-left: 5px;
-    margin-right: 5px;
-    flex-basis: 30%;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    justify-content: right;
+}
+
+.progress-text-div {
+    position: absolute;
+    top: 0;
+    left: 0; /* 初始位置为0，因为动画会在这里起作用 */
+    transform: translateX(0); /* 初始位置为0 */
+    line-height: 30px;
+    transition: width 0.5s ease-in-out;
+    /*text-align: right;*/
+    width: 100px;
+}
+
+.progress-text {
+    position: relative;
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #fffcfa;
+    text-align: right;
+    margin-right: 10px
+    
+}
+
+.skill-description{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.skill-description-text{
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: black;
+    text-align: left; 
+}
+
+.life-count-blank{
+    height: 50px;
+    background-color:#fffcfa;
+}
+
+.life-count-block{
+    background-color: #fffcfa;
+    height: 400px;
     text-align: center;
+}
+
+.life-count-content-1{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-bottom: 10px;
+}
+.life-count-content-2{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.life-count-lists{
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.life-count-down-list{
+    background-color: #f2f2f2;
+    width: 280px;
+    height: 200px;
+    border-radius: 20px;
 }
 
 .life-title {
-    margin-top:5px;
-    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 30px;
+    margin-top:20px;
+    margin-bottom: 5px;
 }
 
 .life-date {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
     margin-top: 0px;
     margin-bottom: 10px
 }
 
 .life-count {
-    margin: 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 30px;
 }
 
-.copyright {
-    margin-top: 10px;
-    text-align: center;
+
+.blank{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #fffcfa;
 }
 
-.epilogue {
-    margin-top: 20px;
-    text-align: center;
 
-}

@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header_text {
+    margin-bottom: 10px
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 1px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.feature-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size:  20px;
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+.feature {
+    flex-basis: 30%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.feature p {
+    margin-bottom: 0;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}   
+
+.social-media-image {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.social-media-image-img {
+    width: 55px;
+    height: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.social-media-image-img img{
+    width:100%;
+    padding: 0px;
+    
+}
+
+.notification {
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.notification p {
+    margin: 0px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-image {
+    flex-basis: 20%;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 25% 10%;
+}
+
+.profile-content {
+    flex-basis: 70%;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-title {
+    font-size: 18px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.profile-bio {
+    margin-top: 20px;
+}
+
+.profile-motto {
+    margin-top: 10px;
+    background-color:#f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.profile-motto-quote-mark-left {
+    display: flex;
+    justify-content: left;
+    top: 100%;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.profile-motto-quote {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.profile-motto-quote-mark-right {
+    display: flex;
+    justify-content: right;
+    bottom: 0px;
+    margin: 0px;
+    right: 100%;
+    font-size: 20px;
+    
+}
+
+.life-count-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size:  20px;
+    font-weight: bold;
+}
+
+.life-count-down-lists {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.life-count-down-list-1 {
+    flex-basis: 30%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.life-count-down-list-2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-basis: 30%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.life-title {
+    margin-top:5px;
+    margin-bottom: 0px;
+}
+
+.life-date {
+    margin-top: 0px;
+    margin-bottom: 10px
+}
+
+.life-count {
+    margin: 0px;
+}
+
+.copyright {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.epilogue {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+

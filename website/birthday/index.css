@@ -228,61 +228,72 @@ hr {
 }
 
 
-
-body {
-    font-family: Arial, sans-serif;
-    background-color:#fffcfa;
-    margin: 0;
-    padding: 0;
+.about-blank{
+    height: 100px;
+    background-color: #fffcfa;
 }
 
-.header {
-    color: #333;
-    padding-top: 20px;
-    padding-bottom: 10px;
+.about-content{
+    height: 200px;
+    background-color: #fffcfa;
+}
+
+.about-content-1{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
     margin-bottom: 10px;
-    text-align: center;
 }
-
-.header_text {
-    margin-bottom: 10px
+.about-content-2{
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Noto Sans TC', sans-serif;
 }
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.about-content-3{
     margin-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 1px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    text-align: center; /* 水平居中容器内的文本 */
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
-h1 {
-    font-size: 36px;
-    margin-top: 0;
+.HBD-container{
+    background-color: #fffcfa;
+    height: 1000px;
 }
 
-p {
-    line-height: 1.5;
-}
-
-.rice-table {
-    margin-top: 20px;
+/* 三列布局容器 */
+.person {
     display: flex;
-    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* 列样式 */
+.column {
+    flex: 1; /* 使三列平均宽度 */
+    padding: 20px;
     text-align: center;
-    font-size: 18px;
+    border-width: 5px;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
-.rice-table table{
-    border-collapse: collapse;
+
+.column-middle{
+    border-left: 3px #d5d5d5 solid;
+    border-right: 3px #d5d5d5 solid;
 }
 
-.rice-table table tr td{
-    border:solid 1px;
-    padding: 10px;
+.column-right{
+    
+    border-right: 3px #d5d5d5 solid;
+}
+
+.end {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
 }
