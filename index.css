@@ -69,6 +69,15 @@ hr {
          url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
   }
 
+@media screen and (max-width: 850px) {
+    .scaled-element {
+        transform: scale(0.95); /* 在小屏幕上缩小80% */
+    }
+    .scaled-element-more{
+        transform: scale(0.8);
+    }
+}
+
 .intro_img{
     color: #000;
     background-image:url('./img/introJPG.jpg');
@@ -85,12 +94,16 @@ hr {
     
 }
 
+.intro_topic_box{
+    top: 20%;
+}
+
 .intro_topic{
     position: absolute;
     top: 20%; /* 将元素的顶部移动到父容器的中间位置 */
     left: 5%; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
-    font-size: 600%;
+    font-size: 500%;
     font-family: 'Dela Gothic One', cursive;
     color: white;
     font-weight: bold;
@@ -325,8 +338,8 @@ hr {
 .about-profile-skills{
     display: flex;
     justify-content: center; /* 水平居中 */
-    height: 100vh;
-    width: 75%;
+    height: 500%;
+    width: 95%;
     line-height: 1.25;
 }
 
@@ -417,6 +430,13 @@ hr {
     text-align: left; 
 }
 
+.life-count {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 30px;
+    background-color: #fffcfa;
+}
+
+
 .life-count-blank{
     height: 50px;
     background-color:#fffcfa;
@@ -443,15 +463,15 @@ hr {
 }
 
 .life-count-lists{
-    margin: 20px auto;
+    margin: 4% auto;
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+    justify-content: space-around;
+    width: 95%;
 }
 
 .life-count-down-list{
     background-color: #f2f2f2;
-    width: 280px;
+    width: 30%;
     height: 200px;
     border-radius: 20px;
 }
@@ -459,21 +479,23 @@ hr {
 .life-title {
     font-weight: bold;
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 30px;
-    margin-top:20px;
-    margin-bottom: 5px;
+    font-size: 100%;
+    margin-top: 10%;
+    margin-bottom: 4%;
 }
 
 .life-date {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 20px;
+    font-size: 80%;
     margin-top: 0px;
-    margin-bottom: 10px
+    margin-bottom: 4%
 }
 
-.life-count {
+.life-countdown{
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 30px;
+    font-size: 100%;
+    margin-top: 0px;
+    margin-bottom: 2.5%
 }
 
 
