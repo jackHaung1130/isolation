@@ -78,6 +78,13 @@ hr {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .scaled-element {
+        transform: scale(0.5); /* 在小屏幕上缩小80% */
+      
+    }
+}
+
 .intro_img{
     color: #000;
     background-image:url('./img/introJPG.jpg');
@@ -124,7 +131,7 @@ hr {
 
 .intro_topic_2{
     position: absolute;
-    top: 90%; /* 将元素的顶部移动到父容器的中间位置 */
+    top: 50%; /* 将元素的顶部移动到父容器的中间位置 */
     right: 3%; /* 将元素的左侧移动到父容器的中间位置 */
     /*transform: translate(-50%, -50%); /* 使用transform来水平和垂直居中 */
     font-size: 250%;

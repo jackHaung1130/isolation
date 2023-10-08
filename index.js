@@ -76,6 +76,8 @@ console.log(birthdaySpan)
 
 document.querySelector('.browser-info').textContent = window.innerWidth
 
+
+
 window.addEventListener('resize', function() {
     if (window.innerWidth < 500) { // 例如，当窗口宽度小于768像素时
         document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=0.5'); // 缩小视口比例
