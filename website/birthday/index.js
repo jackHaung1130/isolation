@@ -39,10 +39,14 @@ function calculateAge(birthDate) {
 
 const birthday = document.querySelectorAll('.person');
 
+//console.log(birthday)
+
 birthday.forEach((birthday, e) => {
-    const birthDate = new Date(birthday.querySelector('.date').textContent)
-    
+    //console.log(birthday)
+    const birthDate = new Date(birthday.querySelector('.date').textContent.trim())
+    //console.log(birthDate)
     birthday.querySelector('.age').textContent = `${calculateAge(birthDate)} 歲`
+
     birthday.querySelector('.left_day').textContent = '剩餘 ' + calculateDaysUntilBirthday(birthDate) + ' 天'
     
 

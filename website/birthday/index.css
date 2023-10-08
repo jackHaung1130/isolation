@@ -69,12 +69,7 @@ hr {
          url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
   }
 
-  @media screen and (max-width: 500px) {
-    .scaled-element {
-        transform: scale(0.5); /* 在小屏幕上缩小80% */
-      
-    }
-}
+
 
 
 .intro_img{
@@ -281,10 +276,10 @@ hr {
 /* 列样式 */
 .column {
     flex: 1; /* 使三列平均宽度 */
-    padding: 20px;
+    padding: 3%;
     text-align: center;
     border-width: 5px;
-    font-size: 20px;
+    font-size: 180%;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
