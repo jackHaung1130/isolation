@@ -72,3 +72,6 @@ document.querySelector(".eighteen-year-old-hour").textContent = daysUntilBirthda
 //document.querySelector('.18-year-old-day').textContent = daysUntilBirthday
 
 console.log(birthdaySpan)
+
+
+document.querySelector('.browser-info').textContent = window.innerWidth
